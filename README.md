@@ -6,14 +6,6 @@
 [![Jupyter](https://img.shields.io/badge/Notebook-Jupyter-orange.svg)](https://jupyter.org/)
 [![Institution](https://img.shields.io/badge/Institution-PENS-003366.svg)](https://www.pens.ac.id/)
 
-Repositori ini memuat implementasi lengkap, eksplorasi hyperparameter optimal, serta pengujian peramalan masa depan (*future forecasting*) menggunakan arsitektur **Long Short-Term Memory (LSTM)** untuk pemodelan data deret waktu (*Time Series Prediction*).
-
-* **Mata Kuliah**: Praktikum Neuro Computing (Jaringan Saraf Tiruan)
-* **Program Studi**: D4 Sains Data Terapan (SDT), Departemen Teknik Informatika dan Komputer
-* **Institusi**: Politeknik Elektronika Negeri Surabaya (PENS)
-* **Mahasiswa**: Ilham Bintang Satria (NRP: 3324600041)
-* **Dosen Pengampu**: Prof. Dr. Ir. Ali Ridho Barakbah, S.Kom., Ph.D. & Ir. Entin Martiana Kusumaningtyas, M.Kom., Ph.D.
-
 ---
 
 ## 📌 Deskripsi Modul & Studi Kasus
@@ -122,48 +114,3 @@ Model melakukan *recursive multi-step forecasting* untuk memproyeksikan nilai ek
 | **Kopi** | **205.25** | 120.00 | **192.85** | 109.60 | Menangkap tren penurunan dari puncak 2025 |
 
 ---
-
-## 📂 Struktur Repositori
-
-```text
-LSTM/
-├── Data/
-│   └── ekspor.xlsx                      # Dataset Nilai Ekspor Pertanian BPS 2022–2026
-├── Praktikum_LSTM_Ekspor_Pertanian.ipynb # Notebook utama (1.09 MB, seluruh plot & tabel telah dieksekusi)
-└── README.md                            # Laporan dokumentasi praktikum terstruktur
-```
-
----
-
-## 💻 Panduan Menjalankan Notebook
-
-1. **Clone repositori**:
-   ```bash
-   git clone https://github.com/YonoBengkel/LSTM.git
-   cd LSTM
-   ```
-
-2. **Jalankan Jupyter Notebook**:
-   ```bash
-   jupyter notebook Praktikum_LSTM_Ekspor_Pertanian.ipynb
-   ```
-   *Catatan: Berkas notebook ini telah dieksekusi sebelumnya (`pre-executed`), sehingga seluruh visualisasi kurva loss, perbandingan data aktual vs prediksi, serta tabel metrik dapat langsung dilihat tanpa harus melatih ulang.*
-
----
-
-## 📽️ Panduan Slide Presentasi PPT (`NCSDT_M9_NRP_namadepan.pdf`)
-
-| No. Slide | Topik Slide | Konten & Screenshot yang Diambil |
-| :---: | :--- | :--- |
-| **Slide 1** | **Judul & Identitas** | Judul Proyek, Nama: Ilham Bintang Satria, NRP: 3324600041, D4 Sains Data Terapan PENS. |
-| **Slide 2** | **Konsep Dasar & Arsitektur LSTM** | Penjelasan 3 Gate (*Forget, Input, Output*), Cell State ($C_t$), dan metode *Sliding Window*. |
-| **Slide 3** | **Tutorial 1: Gelombang Sinus** | Screenshot kode sequence + Plot hasil prediksi data train & test sinus (**Cell 4 & 7**). |
-| **Slide 4** | **Deskripsi Kasus & Dataset Ekspor BPS** | Tabel data 14 komoditas 2022–2025 + barplot total nilai ekspor komoditas (**Cell 9 & 10**). |
-| **Slide 5** | **Assignment 1: Prediksi 6 Bulan Akhir 2025** | Skema pembagian data (42 bulan train, 6 bulan test) + kode model CommodityLSTM (**Cell 12**). |
-| **Slide 6** | **Hasil Evaluasi Error 14 Komoditas** | Screenshot tabel metrik evaluasi RMSE, MAE, MAPE seluruh komoditas (**Cell 12**). |
-| **Slide 7** | **Visualisasi Prediksi 6 Bulan Terakhir 2025** | Screenshot multi-plot komparasi data aktual vs prediksi komoditas unggulan (**Cell 13**). |
-| **Slide 8** | **Assignment 2: Analisa Parameter Terbaik** | Variasi *look-back*, *units*, *learning rate* + tabel Top 10 parameter terbaik (**Cell 15**). |
-| **Slide 9** | **Analisis Grafik Hyperparameter** | Screenshot 3 barplot pengaruh *look-back*, *units*, dan *LR* terhadap penurunan RMSE (**Cell 16**). |
-| **Slide 10** | **Assignment 3: Prediksi Jan & Feb 2026** | Screenshot tabel proyeksi nilai ekspor Jan & Feb 2026 + validasi data aktual BPS (**Cell 18**). |
-| **Slide 11** | **Assignment 4: Visualisasi Lengkap 2025–2026** | Screenshot kurva bersambung dari data 2025 hingga proyeksi Jan–Feb 2026 (**Cell 19**). |
-| **Slide 12** | **Kesimpulan & Rekomendasi** | Rangkuman performa LSTM, pengaruh siklus musiman, dan strategi ekspor komoditas (**Cell 21**). |
