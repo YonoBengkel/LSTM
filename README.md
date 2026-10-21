@@ -1,4 +1,4 @@
-# Praktikum 9 — Long Short-Term Memory (LSTM)
+# Long Short-Term Memory (LSTM)
 ## **Time Series Prediction: Prediksi Nilai Ekspor Bulanan Produk Pertanian Berdasarkan Komoditas (BPS) & Gelombang Sinus**
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
